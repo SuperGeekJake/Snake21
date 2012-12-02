@@ -1,0 +1,61 @@
+=======================================================
+  XXXXX                  XX                XXX      X
+ X     X                  X               X   X   XXX
+ X                        X                   X     X
+ X       XX XX    XXXX    X  XX   XXXXX       X     X
+  XXXXX   XX  X       X   X  X   X     X     X      X
+       X  X   X   XXXXX   X X    XXXXXXX    X       X
+       X  X   X  X    X   XXX    X         X        X
+ X     X  X   X  X    X   X  X   X     X  X         X
+  XXXXX  XXX XXX  XXXX X XX   XX  XXXXX   XXXXX   XXXXX
+=======================================================
+Simple Blackjack (21) by Jacob Williams
+Gameplay:
+> Single player
+> Unlimited Decks
+> Only allows for hit or stand
+> House hits below 17
+> No specialized rules
+> No chips or money involved
+=======================================================
+
+Want to play a hand?(y/n): y
+
+====================== New Hand =======================
+
+   Your Hand: 10(Club) King(Diamond) = 20
+House's Hand: Jack(Spade) Unknown(?) = 10
+
+Hit or Stand(h/s): h
+
+   Your Hand: 10(Club) King(Diamond) 1(Club) = 21
+House's Hand: Jack(Spade) 7(Club) = 17
+
+You Won, that's great. Another hand?(y/n): y
+
+====================== New Hand =======================
+
+   Your Hand: 6(Heart) 5(Spade) = 11
+House's Hand: Ace(Diamond) Unknown(?) = 11
+
+Hit or Stand(h/s): h
+
+   Your Hand: 10(Club) 10(Diamond) 1(Club) = 21
+House's Hand: Jack(Spade) Unknown(?) = 10
+
+You busted, I'm sorry. Another hand?(y/n): y
+
+====================== New Hand =======================
+
+   Your Hand: 6(Club) 4(Diamond) = 10
+House's Hand: Jack(Spade) Unknown(?) = 10
+
+Hit or Stand(h/s): h
+
+   Your Hand: 6(Club) 4(Diamond) Queen(Club) = 20
+House's Hand: Jack(Spade) King(Heart) = 20
+
+You tied the house. Another hand?(y/n): n
+
+=======================================================
+=============XXXX Thanks for playing! XXXX=============
