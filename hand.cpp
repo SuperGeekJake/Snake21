@@ -4,9 +4,14 @@ public:
 	void dealCard(int amount);
 	void displayHand();
 	int getScore();
+	string getSuite(int i);
+	void resetHand();
+
 }yHand, hHand;
 
 void Hand::dealCard(int amount) {
+	// Intialize random seed with current time
+	srand (time(NULL));
 	// Number of cards in a deck
 	const int DECK = 52;
 	int card;
@@ -20,26 +25,57 @@ void Hand::dealCard(int amount) {
 }
 
 void Hand::displayHand() {
-	for (int i=0;i<cards.size();i++) {
-		cout << cards[i] << endl;
+	for (unsigned int i=0;i<cards.size();i++) {
+		if (cards[i]%13 == 0) {
+			cout << "King";
+		}
+		else if (cards[i]%13 == 12) {
+			cout << "Queen";
+		}
+		else if (cards[i]%13 == 11) {
+			cout << "Jack";
+		}
+		else if (cards[i]%13 == 1) {
+			cout << "Ace";
+		}
+		else {
+			cout << cards[i]%13;
+		}
+		cout << "(" << getSuite(i) << ") ";
 	}
 }
 
 int Hand::getScore() {
 	int total = 0;
-	for (int i=0;i<cards.size();i++) {
-		// if its a face card, value should be set to 10
+	for (unsigned int i=0;i<cards.size();i++) {
 		if (cards[i]%13 == 0 or cards[i]%13 > 10) {
 			total += 10;
 		}
-		// What if it's an ace?
 		else if (cards[i]%13 == 1) {
 			total += 11;
 		}
-		// Otherwise, we just want its number value
 		else {
 			total += cards[i]%13;
 		}
 	}
 	return total;
+}
+
+string Hand::getSuite(int i) {
+	if (cards[i]<14) {
+		return "Spade";
+	}
+	else if (cards[i]<27) {
+		return "Diamond";
+	}
+	else if (cards[i]<40) {
+		return "Club";
+	}
+	else {
+		return "Heart";
+	}
+}
+
+void Hand::resetHand() {
+	cards.resize(0);
 }
