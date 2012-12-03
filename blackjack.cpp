@@ -66,6 +66,9 @@ int main() {
 
 	 	if (yHandScore > 21) {
 	 		cout << "You busted, sorry." << endl;
+	 	} else if (hHandScore > 21) {
+	 		displayHands(false);
+	 		cout << "You won, house busted!" << endl;
 	 	} else if (yHandScore < hHandScore) {
 	 		displayHands(false);
 	 		cout << "The house won, sorry." << endl;

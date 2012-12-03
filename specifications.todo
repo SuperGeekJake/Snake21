@@ -1,8 +1,8 @@
 Specifications:
+Maximum Score: 60 (without extra credit)
 (#): Point value for specification
  ☐ (-10) Global variable
- ✔ (1) Object @done (12-12-02 23:24)
- ✔ (1) Class with private member and public function @done (12-12-02 23:24)
+ ✔ (6) Object and Class with private member and public function @done (12-12-02 23:24)
  ✔ (2) While/do-while loop @done (12-12-02 23:34)
  ✔ (2) For loop @done (12-12-02 23:34)
  ✔ (2) If/if-else @done (12-12-02 23:35)
@@ -19,6 +19,23 @@ Specifications:
  ☐ (1) Stream parameters in a function definition
  ☐ (1) setw() manipulator
  ☐ (1) setprecision() manipulator
- ☐ (4) Project report
+ ☐ (4) Project report (enhanced README.txt)
  ☐ (4) Documentation requirements
  ☐ (14) Code must compile and function correctly
+
+ Extra Credit Specifications:
+ ☐ Present your completed project one class meeting or more earlier (2 points)
+ ☐ Graphics-based application (2 points)
+ ☐ Code a function that makes a recursive call. (2 points)
+ ☐ Code a vector of objects from a class that you wrote and process the vector in a loop. (2 points)
+ ☐ Sort a vector using the STL sort() function from the algorithm library (1 point)
+ ☐ Write your own sorting algorithm and apply it to a vector. Name your function sortXXX() where XXX can be anything. State your source for the algorithm in your "README.txt" file. (2 points)
+ ☐ Create HTML documentation for your program using Doxygen and submitting the documentation in a zip file. (1 point)
+ ☐ Use your imagination and code C++ features not covered in this course -- be sure to clearly identify your creative features. (0 to 4 points)
+    0: Extra credit feature is trivial or does not work
+    1: Extra credit is simple and works
+    2: Two simple extra credit features or one complex or imaginative use of a feature
+    3: Three simple features or one simple features and one complex or imaginative use of a feature
+    4: Four simple features, two complex or imaginative use of a feature, or some combination
+
+#### Make certain that your README.txt file lists any extra credit attempted and the file and line number of the extra credit where appropriate. Without the file and line number I may not see the extra credit. ###
