@@ -1,0 +1,24 @@
+Specifications:
+(#): Point value for specification
+ ☐ (-10) Global variable
+ ✔ (1) Object @done (12-12-02 23:24)
+ ✔ (1) Class with private member and public function @done (12-12-02 23:24)
+ ✔ (2) While/do-while loop @done (12-12-02 23:34)
+ ✔ (2) For loop @done (12-12-02 23:34)
+ ✔ (2) If/if-else @done (12-12-02 23:35)
+ ✔ (2) Void function @done (12-12-02 23:35)
+ ✔ (2) Non-void function @done (12-12-02 23:35)
+ ☐ (2) Pass-by-value parameter
+ ☐ (2) Pass-by-reference parameter
+ ☐ (2) Overloaded function
+ ☐ (2) Overloaded constructor
+ ✔ (4) Vector @done (12-12-02 23:35)
+ ☐ (3) Read from file
+ ☐ (3) Write to file
+ ☐ (1) fail() whenever file is opened
+ ☐ (1) Stream parameters in a function definition
+ ☐ (1) setw() manipulator
+ ☐ (1) setprecision() manipulator
+ ☐ (4) Project report
+ ☐ (4) Documentation requirements
+ ☐ (14) Code must compile and function correctly
