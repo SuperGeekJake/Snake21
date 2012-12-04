@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <time.h>
+#include <fstream>
 using namespace std;
 
 // Classes
@@ -17,8 +18,31 @@ void displayHands(bool hide);
  * @return Ends program
  */
 int main() {
-	// Game loop ends if it == 'n'
-	char cont = 'y';
+	int wins;
+	int losses;
+
+	char newPlayer;
+	cout << "Are you a new player?(y/n): ";
+	cin >> newPlayer;
+	if (newPlayer == 'y') {
+		wins = 0;
+		losses = 0;
+	}
+	else {
+		// Read scores from file
+		ifstream fin;
+	    fin.open("scores.txt");
+	    if (fin.fail()) {
+	        cout << "Input file opening failed." << endl;
+	        exit(-1);
+	    }
+	    fin >> wins >> losses;
+	    fin.close();
+	}
+
+	// Intialize random seed with current time
+	srand (time(NULL));
+
 	// House's hit limit
 	const int HITLIMIT = 17;
 	// Max score without busting
@@ -26,10 +50,11 @@ int main() {
 	//Hit or Stand message
 	const string HSMESG = "Hit or Stand?(y/n): ";
 
+	char cont;
 	/**
 	 * Main game loop
 	 */
-	while (cont == 'y') {
+	do {
 		// Single Round
 		// =======================================
 		yHand.dealCard(2);
@@ -64,20 +89,26 @@ int main() {
 	 	int yHandScore = yHand.getScore();
 	 	int hHandScore = hHand.getScore();
 
+
 	 	if (yHandScore > 21) {
-	 		cout << "You busted, sorry." << endl;
-	 	} else if (hHandScore > 21) {
-	 		displayHands(false);
-	 		cout << "You won, house busted!" << endl;
-	 	} else if (yHandScore < hHandScore) {
-	 		displayHands(false);
-	 		cout << "The house won, sorry." << endl;
-	 	} else if (yHandScore > hHandScore) {
-	 		displayHands(false);
-	 		cout << "You won, well played!" << endl;
+	 		cout << "You busted, sorry.";
+	 		losses++;
+	 		cout << endl;
 	 	} else {
 	 		displayHands(false);
-	 		cout << "You tied the house." << endl;
+	 		if (hHandScore > 21) {
+		 		cout << "You won, house busted!";
+		 		wins++;
+		 	} else if (yHandScore < hHandScore) {
+		 		cout << "The house won, sorry.";
+		 		losses++;
+		 	} else if (yHandScore > hHandScore) {
+		 		cout << "You won, well played!";
+		 		wins++;
+		 	} else {
+		 		cout << "You tied the house.";
+		 	}
+		 	cout << endl;
 	 	}
 
 	 	// =======================================
@@ -86,10 +117,23 @@ int main() {
 	 	// Remove cards from objects' cards vector in case of another hand
 	 	yHand.resetHand();
 	 	hHand.resetHand();
+
+	 	cout << "Wins: " << wins << " Losses: " << losses << endl;
 	 	cout << "Want to play another hand?(y/n): ";
 	 	// Repeat game loop?
 	 	cin >> cont;
-	}
+
+	} while (cont == 'y');
+
+	ofstream fout;
+    fout.open("scores.txt");
+    if (fout.fail()) {
+        cout << "Output file opening failed.\n";
+        exit(-1);
+    }
+    fout << wins << endl
+         << losses << endl;
+    fout.close();
 	
 	return 0;
 }

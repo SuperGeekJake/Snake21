@@ -1,3 +1,6 @@
+/**
+ * Class for a hand of cards
+ */
 class Hand {
 	vector<int> cards;
 public:
@@ -9,9 +12,11 @@ public:
 
 }yHand, hHand;
 
+/**
+ * Randomly deal a card to a hand
+ * @param amount Number of cards to deal
+ */
 void Hand::dealCard(int amount) {
-	// Intialize random seed with current time
-	srand (time(NULL));
 	// Number of cards in a deck
 	const int DECK = 52;
 	int card;
@@ -24,6 +29,9 @@ void Hand::dealCard(int amount) {
 	}
 }
 
+/**
+ * Cout all cards to a hand with suite
+ */
 void Hand::displayHand() {
 	for (unsigned int i=0;i<cards.size();i++) {
 		if (cards[i]%13 == 0) {
@@ -45,6 +53,10 @@ void Hand::displayHand() {
 	}
 }
 
+/**
+ * Take card and return score
+ * @return Score of card
+ */
 int Hand::getScore() {
 	int total = 0;
 	for (unsigned int i=0;i<cards.size();i++) {
@@ -61,6 +73,11 @@ int Hand::getScore() {
 	return total;
 }
 
+/**
+ * Take card and return suite
+ * @param  i Vector index number
+ * @return   A card's suite
+ */
 string Hand::getSuite(int i) {
 	if (cards[i]<14) {
 		return "Spade";
@@ -76,6 +93,9 @@ string Hand::getSuite(int i) {
 	}
 }
 
+/**
+ * Reset Hands' vectors for new hand
+ */
 void Hand::resetHand() {
 	cards.resize(0);
 }
