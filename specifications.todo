@@ -8,20 +8,20 @@ Maximum Score: 60 (without extra credit)
  ✔ (2) If/if-else @done (12-12-02 23:35)
  ✔ (2) Void function @done (12-12-02 23:35)
  ✔ (2) Non-void function @done (12-12-02 23:35)
- ☐ (2) Pass-by-value parameter
+ ✔ (2) Pass-by-value parameter @done (12-12-04 03:17)
  ☐ (2) Pass-by-reference parameter
  ☐ (2) Overloaded function
  ☐ (2) Overloaded constructor
  ✔ (4) Vector @done (12-12-02 23:35)
- ☐ (3) Read from file
- ☐ (3) Write to file
- ☐ (1) fail() whenever file is opened
+ ✔ (3) Read from file @done (12-12-04 03:15)
+ ✔ (3) Write to file @done (12-12-04 03:15)
+ ✔ (1) fail() whenever file is opened @done (12-12-04 03:15)
  ☐ (1) Stream parameters in a function definition
- ☐ (1) setw() manipulator
+ ✔ (1) setw() manipulator @done (12-12-04 11:19)
  ☐ (1) setprecision() manipulator
- ☐ (4) Project report (enhanced README.txt)
- ☐ (4) Documentation requirements
- ☐ (14) Code must compile and function correctly
+ ✔ (4) Project report (enhanced README.txt) @done (12-12-04 11:19)
+ ✔ (4) Documentation requirements @done (12-12-04 11:19)
+ ✔ (14) Code must compile and function correctly @done (12-12-04 11:19)
 
  Extra Credit Specifications:
  ☐ Present your completed project one class meeting or more earlier (2 points)

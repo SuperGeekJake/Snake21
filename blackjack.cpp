@@ -2,6 +2,7 @@
 #include <vector>
 #include <time.h>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 // Classes
@@ -140,7 +141,7 @@ int main() {
 
 void displayHands(bool hide) {
 	// Display your cards and score
-	cout << "Your Hand: ";
+	cout << setw(12) << "Your Hand: ";
  	yHand.displayHand();
  	cout << "= " << yHand.getScore() << endl;
  	// Display house's cards and score
